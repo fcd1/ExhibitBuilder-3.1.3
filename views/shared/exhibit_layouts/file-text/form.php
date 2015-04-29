@@ -23,9 +23,7 @@ $options = $block->getOptions();
         <?php
         echo $this->formSelect($formStem . '[options][file-position]',
             @$options['file-position'], array(),
-            array('left' => __('Left'),
-		  'right' => __('Right'),
-		  'center' => __('Center, text ignored - DO NOT USE!')));
+            array('left' => __('Left'), 'right' => __('Right')))
         ?>
     </div>
     
