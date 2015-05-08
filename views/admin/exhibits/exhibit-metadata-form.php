@@ -54,6 +54,12 @@
                     <input type="submit" class="configure-button" name="configure-theme" value="<?php echo __('Configure'); ?>">
             </div>
         </div>
+    <?php 
+      // fcd1, 05/07/15: Add capability to view/change exhibit owner
+      fire_plugin_hook('edit_exhibit_metadata',array('user' => current_user(),
+                                                     'view' => $this,
+                                                     'exhibit' => $exhibit ) );
+    ?>
     </fieldset>
     <fieldset>
         <legend><?php echo __('Pages'); ?></legend>
